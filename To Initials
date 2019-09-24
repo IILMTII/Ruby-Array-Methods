@@ -1,0 +1,11 @@
+def to_initials(name)
+ n=name.split(" ")
+  ini=" "
+  n.each.with_index{|u| ini+=u[0]}
+  return ini
+
+end
+
+puts to_initials("Kelvin Bridges")      # => "KB"
+puts to_initials("Michaela Yamamoto")   # => "MY"
+puts to_initials("Mary La Grange")      # => "MLG"
