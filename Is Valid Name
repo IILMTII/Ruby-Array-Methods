@@ -1,0 +1,24 @@
+def is_valid_name(str)
+alpha= str.split(" ")
+  if alpha.length<2
+    return false
+  end
+    alpha.each do |n|
+    if !cap(n)
+      return false
+     end
+    end
+  return true
+end   
+    def cap(u)
+    if u[0]==u[0].upcase &&  u[1..-1]==u[1..-1].downcase
+      return true
+    else
+      return false
+    end
+      end
+
+puts is_valid_name("Kush Patel")       # => true
+puts is_valid_name("Daniel")           # => false
+puts is_valid_name("Robert Downey Jr") # => true
+puts is_valid_name("ROBERT DOWNEY JR") # => false
