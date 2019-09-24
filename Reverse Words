@@ -1,0 +1,10 @@
+def reverse_words(sent)
+p=sent.split(" ")
+  new=[]
+  p.each { |n| new<<n.reverse}
+  return new.join(" ")
+  
+end
+
+puts reverse_words('keep coding') # => 'peek gnidoc'
+puts reverse_words('simplicity is prerequisite for reliability') # => 'yticilpmis si etisiuqererp rof ytilibailer'
