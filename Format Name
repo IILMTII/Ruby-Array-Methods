@@ -1,0 +1,11 @@
+def format_name(str)
+ name=str.split(" ")
+  new=[]
+  name.each do |alpha|
+    new<<alpha[0].upcase+alpha[1..-1].downcase
+  end
+  return new.join(" ")
+end
+
+puts format_name("chase WILSON") # => "Chase Wilson"
+puts format_name("brian CrAwFoRd scoTT") # => "Brian Crawford Scott"
