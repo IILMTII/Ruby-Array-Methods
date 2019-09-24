@@ -1,0 +1,26 @@
+def abbreviate_sentence(sent)
+word= sent.split(" ")
+  word_new=[]
+  
+  word.each do |n|
+    if n.length >4
+      word_new<< abbreviate_word(n)
+    else
+      word_new<<n
+    end
+  end
+  return word_new.join(" ")
+end 
+def abbreviate_word(n)
+  vowels = "aeiou"
+  new_word=""
+  n.each_char do |alpha|
+    if !vowels.include?(alpha)
+      new_word+=alpha
+    end
+  end
+ return new_word
+end
+  
+puts abbreviate_sentence("follow the yellow brick road") # => "fllw the yllw brck road"
+puts abbreviate_sentence("what a wonderful life")        # => "what a wndrfl life"
