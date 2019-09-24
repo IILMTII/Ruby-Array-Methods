@@ -1,0 +1,31 @@
+def is_valid_email(str)
+  part = str.split("@")
+  
+   if part.length !=2
+     return false
+   end
+  
+  first = part[0]
+  second = part[1]
+   alpha = "abcdefghijklmnopqrstuvwxyz"
+
+  first.each_char do |char|
+    if !alpha.include?(char)
+      return false
+    end
+  end
+
+  part2=second.split(".")
+    if part2.length==2
+      return true
+    else
+      return false
+    end
+end
+
+puts is_valid_email("abc@xy.z")         # => true
+puts is_valid_email("jdoe@gmail.com")   # => true
+puts is_valid_email("jdoe@g@mail.com")  # => false
+puts is_valid_email("jdoe42@gmail.com") # => false
+puts is_valid_email("jdoegmail.com")    # => false
+puts is_valid_email("az@email")         # => false
